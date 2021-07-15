@@ -16,3 +16,9 @@
   - [x] Connect the formData state to the inputs (make the input value the corresponding formData attribute)
   - [x] Need onChange event handlers to update the state as inputs are changed
 
+## Step 2: Handle submitting the form and updating the database
+  - [x] Make a placeholder handleSubmit event handler for when the form is submitted (in the NewPlantForm component), and a placeholder createPlant function to post to the database (in the PlantPage component)
+  - [x] Send the data up from NewPlantForm to PlantPage (fill in the handleSubmit function)
+  - [x] Use fetch to make the POST request to the database (fill in the createPlant function)
+## Step 3: Render the new plant on the page
+

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function NewPlantForm() {
+function NewPlantForm({ createPlant }) {
   const [formData, setFormData] = useState({
     name: "",
     image: "",
@@ -16,10 +16,19 @@ function NewPlantForm() {
     })
   }
 
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    createPlant({
+      name: formData.name,
+      image: formData.image,
+      price: parseInt(formData.price)
+    })
+  }
+
   return (
     <div className="new-plant-form">
       <h2>New Plant</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
             name="name"
             onChange={handleChange}

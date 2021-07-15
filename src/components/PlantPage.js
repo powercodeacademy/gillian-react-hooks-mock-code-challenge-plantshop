@@ -15,9 +15,21 @@ function PlantPage() {
       .then(data => setPlants(data))
   }, [])
 
+  const createPlant = (newPlant) => {
+    const configObject = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(newPlant)
+    }
+
+    fetch("http://localhost:6001/plants", configObject)
+  }
+
   return (
     <main>
-      <NewPlantForm />
+      <NewPlantForm createPlant={createPlant} />
       <Search />
       <PlantList plants={plants} />
     </main>
