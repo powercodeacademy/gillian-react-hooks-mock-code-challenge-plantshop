@@ -23,7 +23,7 @@ function NewPlantForm({ createPlant }) {
     createPlant({
       name: formData.name,
       image: formData.image,
-      price: parseInt(formData.price)
+      price: parseFloat(formData.price)
     })
     setFormData(defaultData)
   }
