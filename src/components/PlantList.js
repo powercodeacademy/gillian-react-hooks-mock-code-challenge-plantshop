@@ -2,13 +2,12 @@ import React from "react";
 
 import PlantCard from "./PlantCard";
 
-function PlantList({ plants }) {
+function PlantList({ deletePlant, plants }) {
   const plantCardComponents = plants.map(plant => (
     <PlantCard
-        image={plant.image}
+        deletePlant={deletePlant}
         key={plant.id}
-        name={plant.name}
-        price={plant.price}
+        {...plant}
     />
   ))
 
