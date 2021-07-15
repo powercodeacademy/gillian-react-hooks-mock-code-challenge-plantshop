@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 
+const defaultData = {
+  name: "",
+  image: "",
+  price: "",
+}
+
 function NewPlantForm({ createPlant }) {
-  const [formData, setFormData] = useState({
-    name: "",
-    image: "",
-    price: "",
-  })
+  const [formData, setFormData] = useState(defaultData)
 
   const handleChange = (event) => {
     event.preventDefault()
@@ -23,6 +25,7 @@ function NewPlantForm({ createPlant }) {
       image: formData.image,
       price: parseInt(formData.price)
     })
+    setFormData(defaultData)
   }
 
   return (

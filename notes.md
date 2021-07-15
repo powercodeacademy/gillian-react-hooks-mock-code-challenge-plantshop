@@ -21,4 +21,6 @@
   - [x] Send the data up from NewPlantForm to PlantPage (fill in the handleSubmit function)
   - [x] Use fetch to make the POST request to the database (fill in the createPlant function)
 ## Step 3: Render the new plant on the page
+  - [x] Update the plants state to add the newly created plant to the page
+  - [x] Clear the input field
 

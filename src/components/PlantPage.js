@@ -25,6 +25,8 @@ function PlantPage() {
     }
 
     fetch("http://localhost:6001/plants", configObject)
+      .then(response => response.json())
+      .then(data => setPlants([...plants, data]))
   }
 
   return (
