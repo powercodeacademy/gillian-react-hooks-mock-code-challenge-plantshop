@@ -34,6 +34,27 @@ function PlantPage() {
       .then(setPlants(plants.filter(plant => plant.id !== plantId)))
   }
 
+  const updatePlant = (plantId, updatedPriceObject) => {
+    const configObject = {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(updatedPriceObject)
+    }
+
+    fetch(`http://localhost:6001/plants/${plantId}`, configObject)
+      .then(response => response.json())
+      .then(data => {
+        const newPlantList = plants.map(plant => {
+          return plant.id === data.id ? data : plant
+        })
+
+        setPlants(newPlantList)
+        alert("Your price has been updated!")
+      })
+  }
+
   const filteredPlants = plants.filter(plant => (
     plant.name.toLowerCase().includes(search.toLowerCase())
   ))
@@ -48,6 +69,7 @@ function PlantPage() {
       <PlantList
           deletePlant={deletePlant}
           plants={filteredPlants}
+          updatePlant={updatePlant}
       />
     </main>
   );
