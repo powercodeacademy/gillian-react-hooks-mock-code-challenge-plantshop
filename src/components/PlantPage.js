@@ -15,12 +15,11 @@ function PlantPage() {
       .then(data => setPlants(data))
   }, [])
 
-
   return (
     <main>
       <NewPlantForm />
       <Search />
-      <PlantList />
+      <PlantList plants={plants} />
     </main>
   );
 }
