@@ -24,3 +24,8 @@
   - [x] Update the plants state to add the newly created plant to the page
   - [x] Clear the input field
 
+
+# DELIVERABLE 3: I can mark a plant as "sold out"
+  - [x] Create a state for each plant (inside of PlantCard) to keep track of whether a plant is inStock
+  - [x] Conditionally render the "in stock" (or "out of stock") button based on the state
+  - [x] Need an event handler to toggle to out of stock onClick of the green button
