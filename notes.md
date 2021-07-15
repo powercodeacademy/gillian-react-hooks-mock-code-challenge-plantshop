@@ -29,3 +29,14 @@
   - [x] Create a state for each plant (inside of PlantCard) to keep track of whether a plant is inStock
   - [x] Conditionally render the "in stock" (or "out of stock") button based on the state
   - [x] Need an event handler to toggle to out of stock onClick of the green button
+
+
+# DELIVERABLE 4: I can search for plants by their name and see a filtered list of plants
+
+## Step 1: Keep track of the search input as a state
+  - [x] Initialize a new "search" state (in the PlantPage component)
+  - [x] Turn the Search input into a controlled input that updates the "search" state in the PlantPage component
+
+## Step 2: Filter through plants based on what is being searched for and display on the page
+  - [x] Create a filteredPlants variable that filters based on the search state
+  - [x] Replace the plants variable that's passed as a prop to the PlantList with the new filteredPlants one
